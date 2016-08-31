@@ -1,13 +1,1 @@
-# Site settings
-title: Billy
-description: Billy
-favicon: /assets/img/avatar.JPG
-
-# Build settings
-
-highlight: true
-#highlighter: rouge
-
-timezone: Asia/Shanghai
-
-markdown: kramdown
+pygments: true
