@@ -1,8 +1,12 @@
-##视频播放，选用videoview进行播放器的设计
+## 视频播放，选用videoview进行播放器的设计
+### 在layout中，加入videoview控件。
+```
+	X=1;
+	who ==2?
 
-###在layout中，加入videoview控件。
+```
 
-```xml```
+```
 
 <VideoView
 
@@ -12,20 +16,19 @@
 
     android:layout_height="241dp" />
 
+
 ```
-
-###在Mainactivity中使用videoview
-
+### 在Mainactivity中使用videoview
 oncreat方法中
 
-```java```
+```
 
 videoView = (VideoView)findViewById(R.id.video_view);
 
 initVideoPath();
 
-```
 
+```
 initVideoPath()
 
 ```java```
@@ -41,7 +44,6 @@ if(file.exists()){
 }
 
 ```
-
 onClick方法
 
 ```java```
@@ -111,8 +113,7 @@ protected void onDestroy() {
 }
 
 ```
-
-####安卓使用videoview播放视频,做视频播放器需要SD卡读写权限.要不然可以找到视频文件,播放器显示无法播放视频.
+#### 安卓使用videoview播放视频,做视频播放器需要SD卡读写权限.要不然可以找到视频文件,播放器显示无法播放视频.
 
 ```xml```
 
@@ -121,16 +122,14 @@ protected void onDestroy() {
 <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
 
 ```
-
-####让整个APP没有标题栏
+#### 让整个APP没有标题栏
 
 ```xml```
 
 android:theme = "@android:style/Theme.Black.NoTitleBar.Fullscreen"
 
 ```
-
-####强制横屏在AndroidManifest.xml的activity中
+#### 强制横屏在AndroidManifest.xml的activity中
 
 ```xml```
 
@@ -139,11 +138,8 @@ android:launchMode = "singleTask"
 android:screenorientation = "landscape"
 
 ```
-
-####让视频播放全屏
-
+#### 让视频播放全屏
 ```java```
-
  case R.id.fullscreen://全屏/窗口切换
       {
        if(!fullscreenFlag){//设置RelativeLayout的全屏模式
@@ -167,8 +163,7 @@ fullscreenFlag = (!fullscreenFlag);break;
       }
 
 ```
-
-####进度条设计
+#### 进度条设计
 
 在seekbar使用的过程中，出现了一个诡异的现象。duration是视频总长度，seekbar总长度是100。progress是进度条（0-100）的数值。定义了一个
 
@@ -180,7 +175,7 @@ double time = （progress * duration）/100;得到的就是正确的数据。
 
 由此可见，应该是java编译器优化导致的，知道最后使用了一个int类型，优化成为每一步都使用int类型，这样progress/100就变成了0，0 * 其他数都为0。
 
-####至此，播放部分完成。
+#### 至此，播放部分完成。
 
 可以点击播放、停止、复位、进度条可以拖动控制播放进度（后期补全打开文件功能），软件截图如下：
 
