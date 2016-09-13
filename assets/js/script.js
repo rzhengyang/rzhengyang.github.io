@@ -11,12 +11,12 @@ if ($(window).width() <= 1280) {
 }
 
 // Variables
-    tag1       = $('.全部'),
-    tag2       = $('.技术'),
-    tag3       = $('.旅行'),
-    tag4       = $('.读书'),
-    tag5       = $('.精分'),
-    tag6       = $('.关于我');
+    tag1       = $('全部'),
+    tag2       = $('技术'),
+    tag3       = $('旅行'),
+    tag4       = $('读书'),
+    tag5       = $('精分'),
+    tag6       = $('关于我');
 var sidebar    = $('#sidebar'),
     container  = $('#post'),
     content    = $('#pjax'),

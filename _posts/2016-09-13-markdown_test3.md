@@ -1,5 +1,7 @@
 ---
 layout: post
+category: 技术
+tag: 技术
 ---
 
 ```c
