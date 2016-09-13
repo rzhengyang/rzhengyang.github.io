@@ -28,7 +28,9 @@ void quicksort(int * num,int size,int left,int right)
 ```
 
 # 标题1
+
 ## 标题2
+
 ### 标题3
 
 - 列表1
@@ -50,14 +52,18 @@ void quicksort(int * num,int size,int left,int right)
 ---------------------
 
 漂亮的代码，还可以自动高亮
+
 ```cpp
+
 int i = 0;
 i = 1;
 for (int i = 0; i < 100; i++)
 {
     printf("hello markdown!\n");
 }
+
 ```
+
 *我是斜体*
 测试文字里面，**我是粗体**，很简单
 __我是粗体__
