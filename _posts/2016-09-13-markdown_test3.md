@@ -1,3 +1,7 @@
+---
+layout: post
+---
+
 ```c
 void quicksort(int * num,int size,int left,int right)
 {

@@ -1,3 +1,8 @@
+---
+layout: post
+---
+
+
 ## 视频播放，选用videoview进行播放器的设计
 ### 在layout中，加入videoview控件。
 ```
