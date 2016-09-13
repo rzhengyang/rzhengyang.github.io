@@ -1,5 +1,3 @@
 pygments: true
+highlighter: pygments
 markdown: kramdown
-input: GFM
-use_coderay: true
-
