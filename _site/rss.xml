@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>place_your_blog_title_here</title>
+    <link>place_your_blog_url_here</link>
+    <atom:link href="place_your_blog_url_here/rss.xml" rel="self" type="application/rss+xml" />
+    <description>place_your_blog_description_here</description>
+    <language>place_your_blog_language_here</language>
+    <pubDate>Tue, 13 Sep 2016 11:32:56 +0800</pubDate>
+    <lastBuildDate>Tue, 13 Sep 2016 11:32:56 +0800</lastBuildDate>
+
+    
+    <item>
+      <title>Markdown_test3</title>
+      <link>place_your_blog_url_here/2016/09/13/markdown_test3.html</link>
+      <pubDate>13 Sep 2016</pubDate>
+      <author>place_your_name_here</author>
+      <guid>place_your_blog_url_here/2016/09/13/markdown_test3</guid>
+      <description>&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;void quicksort(int * num,int size,int left,int right)
+{
+ int i,j,t,temp;
+ if(left&amp;gt;right)
+  return;
+ 
+ temp= *(num+left);//存放基数
+ i = left;
+ j = right;
+ while(i!=j)
+ {
+  //要先从右往左找
+  while(*(num+j)&amp;gt;=temp &amp;amp;&amp;amp; i&amp;lt;j)
+   j--;
+  //再从左往右找
+  while(*(num+i)&amp;lt;=temp &amp;amp;&amp;amp; i&amp;lt;j)
+   i++;
+
+  if(i&amp;lt;j)
+  {
+   t=*(num+i);
+   *(num+i)=*(num+j);
+   *(num+j)=t;
+  }
+ }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;section&quot;&gt;标题1&lt;/h1&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;标题2&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;标题3&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;列表1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;测试&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;列表2&lt;/li&gt;
+  &lt;li&gt;列表3
+水平线&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;列表1&lt;/li&gt;
+  &lt;li&gt;列表2&lt;/li&gt;
+  &lt;li&gt;列表3&lt;/li&gt;
+  &lt;li&gt;顺序错了不用担心&lt;/li&gt;
+  &lt;li&gt;写错的列表，会自动纠正
+如果文字后面紧跟着水平线，看看是什么效果&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;漂亮的代码，还可以自动高亮&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-cpp&quot;&gt;
+int i = 0;
+i = 1;
+for (int i = 0; i &amp;lt; 100; i++)
+{
+    printf(&quot;hello markdown!\n&quot;);
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;我是斜体&lt;/em&gt;
+测试文字里面，&lt;strong&gt;我是粗体&lt;/strong&gt;，很简单
+&lt;strong&gt;我是粗体&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Rzy_test2</title>
+      <link>place_your_blog_url_here/2016/09/10/rzy_test2.html</link>
+      <pubDate>10 Sep 2016</pubDate>
+      <author>place_your_name_here</author>
+      <guid>place_your_blog_url_here/2016/09/10/rzy_test2</guid>
+      <description>&lt;h2 id=&quot;videoview&quot;&gt;视频播放，选用videoview进行播放器的设计&lt;/h2&gt;
+&lt;h3 id=&quot;layoutvideoview&quot;&gt;在layout中，加入videoview控件。&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;	X=1;
+	who ==2?
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;
+&amp;lt;VideoView
+
+    android:id=&quot;@+id/vido_view&quot;
+
+    android:layout_width=&quot;match_parent&quot;
+
+    android:layout_height=&quot;241dp&quot; /&amp;gt;
+
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;mainactivityvideoview&quot;&gt;在Mainactivity中使用videoview&lt;/h3&gt;
+&lt;p&gt;oncreat方法中&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+videoView = (VideoView)findViewById(R.id.video_view);
+
+initVideoPath();
+
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;initVideoPath()&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-java```&quot;&gt;
+File file = new File(Environment.getExternalStorageDirectory(),&quot;1.mp4&quot;);//设置播放路径
+
+videoView.setVideoPath(file.getPath());//指定视频文件的路径
+
+if(file.exists()){
+
+    Log.v(&quot;Billy&quot;,&quot;exists&quot;);   
+
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;onClick方法&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-java```&quot;&gt;
+public void onClick(View v) {
+
+switch (v.getId()) {
+
+case R.id.play:
+
+    if (!mediaPlayer.isPlaying()) {
+
+    mediaPlayer.start(); // 开始播放
+
+    }
+
+break;
+
+case R.id.pause:
+
+    if (mediaPlayer.isPlaying()) {
+
+    mediaPlayer.pause(); // 暂停播放
+
+    }
+
+break;
+
+case R.id.stop:
+
+    if (mediaPlayer.isPlaying()) {
+
+    mediaPlayer.reset(); // 停止播放
+
+    initMediaPlayer();
+
+    }
+
+break;
+
+default:
+
+break;
+
+}
+
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在onDestory中进行释放&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-java```&quot;&gt;
+protected void onDestroy() {
+
+    super.onDestroy();
+
+    if (mediaPlayer != null) {
+
+        mediaPlayer.stop();
+
+        mediaPlayer.release();
+
+    }
+
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&quot;videoviewsd&quot;&gt;安卓使用videoview播放视频,做视频播放器需要SD卡读写权限.要不然可以找到视频文件,播放器显示无法播放视频.&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-xml```&quot;&gt;
+&amp;lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;/&amp;gt;
+
+&amp;lt;uses-permission android:name=&quot;android.permission.MOUNT_UNMOUNT_FILESYSTEMS&quot;/&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&quot;app&quot;&gt;让整个APP没有标题栏&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-xml```&quot;&gt;
+android:theme = &quot;@android:style/Theme.Black.NoTitleBar.Fullscreen&quot;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&quot;androidmanifestxmlactivity&quot;&gt;强制横屏在AndroidManifest.xml的activity中&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-xml```&quot;&gt;
+android:launchMode = &quot;singleTask&quot;
+
+android:screenorientation = &quot;landscape&quot;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&quot;section&quot;&gt;让视频播放全屏&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&quot;language-java```&quot;&gt; case R.id.fullscreen://全屏/窗口切换
+      {
+       if(!fullscreenFlag){//设置RelativeLayout的全屏模式
+        RelativeLayout.LayoutParams layoutParams=new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.FILL_PARENT, RelativeLayout.LayoutParams.FILL_PARENT);
+            layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+            layoutParams.addRule(RelativeLayout.ALIGN_PARENT_TOP);
+            layoutParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
+            layoutParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+            videoView.setLayoutParams(layoutParams);
+        }
+
+else{
+           RelativeLayout.LayoutParams lp=new  RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,RelativeLayout.LayoutParams.MATCH_PARENT);
+           lp.addRule(RelativeLayout.ALIGN_PARENT_TOP);
+             videoView.setLayoutParams(lp);
+
+        }    
+
+fullscreenFlag = (!fullscreenFlag);break;
+
+      }
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&quot;section-1&quot;&gt;进度条设计&lt;/h4&gt;
+
+&lt;p&gt;在seekbar使用的过程中，出现了一个诡异的现象。duration是视频总长度，seekbar总长度是100。progress是进度条（0-100）的数值。定义了一个&lt;/p&gt;
+
+&lt;p&gt;double time = （progress/100）* duration;计算数值总是0&lt;/p&gt;
+
+&lt;p&gt;double time = （progress * duration）/100;得到的就是正确的数据。&lt;/p&gt;
+
+&lt;p&gt;我最后使用了videoView.seekTo((int)time0);&lt;/p&gt;
+
+&lt;p&gt;由此可见，应该是java编译器优化导致的，知道最后使用了一个int类型，优化成为每一步都使用int类型，这样progress/100就变成了0，0 * 其他数都为0。&lt;/p&gt;
+
+&lt;h4 id=&quot;section-2&quot;&gt;至此，播放部分完成。&lt;/h4&gt;
+
+&lt;p&gt;可以点击播放、停止、复位、进度条可以拖动控制播放进度（后期补全打开文件功能），软件截图如下：&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Hello Newblog_test1</title>
+      <link>place_your_blog_url_here/2016/09/08/hello-newBlog_test1.html</link>
+      <pubDate>08 Sep 2016</pubDate>
+      <author>place_your_name_here</author>
+      <guid>place_your_blog_url_here/2016/09/08/hello-newBlog_test1</guid>
+      <description>&lt;h3 id=&quot;new-blog-new-test&quot;&gt;new Blog new test&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;zhy&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</description>
+    </item>
+    
+  </channel>
+</rss>
