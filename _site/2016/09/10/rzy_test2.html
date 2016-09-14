@@ -53,15 +53,14 @@
       <div id="pjax">
         <article id="post__content">
   <h1 id="post__title" data-identifier="20160910">Rzy_test2</h1>
-  <h2 id="videoview">视频播放，选用videoview进行播放器的设计</h2>
-<h3 id="layoutvideoview">在layout中，加入videoview控件。</h3>
+  <h1 id="videoview">视频播放，选用videoview进行播放器的设计</h1>
+<h2 id="layoutvideoview">在layout中，加入videoview控件。</h2>
 <pre><code>	X=1;
 	who ==2?
 
 </code></pre>
 
-<pre><code>
-&lt;VideoView
+<pre><code class="language-xml">&lt;VideoView
 
     android:id="@+id/vido_view"
 
@@ -71,10 +70,10 @@
 
 
 </code></pre>
-<h3 id="mainactivityvideoview">在Mainactivity中使用videoview</h3>
+<h2 id="mainactivityvideoview">在Mainactivity中使用videoview</h2>
 <p>oncreat方法中</p>
 
-<pre><code>
+<pre><code class="language-xml">
 videoView = (VideoView)findViewById(R.id.video_view);
 
 initVideoPath();
@@ -83,7 +82,7 @@ initVideoPath();
 </code></pre>
 <p>initVideoPath()</p>
 
-<pre><code class="language-java```">
+<pre><code class="language-java">
 File file = new File(Environment.getExternalStorageDirectory(),"1.mp4");//设置播放路径
 
 videoView.setVideoPath(file.getPath());//指定视频文件的路径
@@ -97,7 +96,7 @@ if(file.exists()){
 </code></pre>
 <p>onClick方法</p>
 
-<pre><code class="language-java```">
+<pre><code class="language-java">
 public void onClick(View v) {
 
 switch (v.getId()) {
@@ -146,7 +145,7 @@ break;
 
 <p>在onDestory中进行释放</p>
 
-<pre><code class="language-java```">
+<pre><code class="language-java">
 protected void onDestroy() {
 
     super.onDestroy();
@@ -162,30 +161,30 @@ protected void onDestroy() {
 }
 
 </code></pre>
-<h4 id="videoviewsd">安卓使用videoview播放视频,做视频播放器需要SD卡读写权限.要不然可以找到视频文件,播放器显示无法播放视频.</h4>
+<h3 id="videoviewsd">安卓使用videoview播放视频,做视频播放器需要SD卡读写权限.要不然可以找到视频文件,播放器显示无法播放视频.</h3>
 
-<pre><code class="language-xml```">
+<pre><code class="language-xml">
 &lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/&gt;
 
 &lt;uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/&gt;
 
 </code></pre>
-<h4 id="app">让整个APP没有标题栏</h4>
+<h3 id="app">让整个APP没有标题栏</h3>
 
-<pre><code class="language-xml```">
+<pre><code class="language-xml">
 android:theme = "@android:style/Theme.Black.NoTitleBar.Fullscreen"
 
 </code></pre>
-<h4 id="androidmanifestxmlactivity">强制横屏在AndroidManifest.xml的activity中</h4>
+<h3 id="androidmanifestxmlactivity">强制横屏在AndroidManifest.xml的activity中</h3>
 
-<pre><code class="language-xml```">
+<pre><code class="language-xml">
 android:launchMode = "singleTask"
 
 android:screenorientation = "landscape"
 
 </code></pre>
-<h4 id="section">让视频播放全屏</h4>
-<pre><code class="language-java```"> case R.id.fullscreen://全屏/窗口切换
+<h3 id="section">让视频播放全屏</h3>
+<pre><code class="language-java"> case R.id.fullscreen://全屏/窗口切换
       {
        if(!fullscreenFlag){//设置RelativeLayout的全屏模式
         RelativeLayout.LayoutParams layoutParams=new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.FILL_PARENT, RelativeLayout.LayoutParams.FILL_PARENT);
@@ -208,7 +207,7 @@ fullscreenFlag = (!fullscreenFlag);break;
       }
 
 </code></pre>
-<h4 id="section-1">进度条设计</h4>
+<h3 id="section-1">进度条设计</h3>
 
 <p>在seekbar使用的过程中，出现了一个诡异的现象。duration是视频总长度，seekbar总长度是100。progress是进度条（0-100）的数值。定义了一个</p>
 
@@ -220,7 +219,7 @@ fullscreenFlag = (!fullscreenFlag);break;
 
 <p>由此可见，应该是java编译器优化导致的，知道最后使用了一个int类型，优化成为每一步都使用int类型，这样progress/100就变成了0，0 * 其他数都为0。</p>
 
-<h4 id="section-2">至此，播放部分完成。</h4>
+<h3 id="section-2">至此，播放部分完成。</h3>
 
 <p>可以点击播放、停止、复位、进度条可以拖动控制播放进度（后期补全打开文件功能），软件截图如下：</p>
 

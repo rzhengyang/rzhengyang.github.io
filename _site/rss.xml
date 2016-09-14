@@ -6,8 +6,8 @@
     <atom:link href="place_your_blog_url_here/rss.xml" rel="self" type="application/rss+xml" />
     <description>place_your_blog_description_here</description>
     <language>place_your_blog_language_here</language>
-    <pubDate>Wed, 14 Sep 2016 09:47:31 +0800</pubDate>
-    <lastBuildDate>Wed, 14 Sep 2016 09:47:31 +0800</lastBuildDate>
+    <pubDate>Wed, 14 Sep 2016 13:59:19 +0800</pubDate>
+    <lastBuildDate>Wed, 14 Sep 2016 13:59:19 +0800</lastBuildDate>
 
     
     <item>
@@ -101,15 +101,14 @@ for (int i = 0; i &amp;lt; 100; i++)
       <pubDate>10 Sep 2016</pubDate>
       <author>place_your_name_here</author>
       <guid>place_your_blog_url_here/2016/09/10/rzy_test2</guid>
-      <description>&lt;h2 id=&quot;videoview&quot;&gt;视频播放，选用videoview进行播放器的设计&lt;/h2&gt;
-&lt;h3 id=&quot;layoutvideoview&quot;&gt;在layout中，加入videoview控件。&lt;/h3&gt;
+      <description>&lt;h1 id=&quot;videoview&quot;&gt;视频播放，选用videoview进行播放器的设计&lt;/h1&gt;
+&lt;h2 id=&quot;layoutvideoview&quot;&gt;在layout中，加入videoview控件。&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;	X=1;
 	who ==2?
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;pre&gt;&lt;code&gt;
-&amp;lt;VideoView
+&lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;&amp;lt;VideoView
 
     android:id=&quot;@+id/vido_view&quot;
 
@@ -119,10 +118,10 @@ for (int i = 0; i &amp;lt; 100; i++)
 
 
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&quot;mainactivityvideoview&quot;&gt;在Mainactivity中使用videoview&lt;/h3&gt;
+&lt;h2 id=&quot;mainactivityvideoview&quot;&gt;在Mainactivity中使用videoview&lt;/h2&gt;
 &lt;p&gt;oncreat方法中&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;
+&lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;
 videoView = (VideoView)findViewById(R.id.video_view);
 
 initVideoPath();
@@ -131,7 +130,7 @@ initVideoPath();
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;initVideoPath()&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-java```&quot;&gt;
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;
 File file = new File(Environment.getExternalStorageDirectory(),&quot;1.mp4&quot;);//设置播放路径
 
 videoView.setVideoPath(file.getPath());//指定视频文件的路径
@@ -145,7 +144,7 @@ if(file.exists()){
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;onClick方法&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-java```&quot;&gt;
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;
 public void onClick(View v) {
 
 switch (v.getId()) {
@@ -194,7 +193,7 @@ break;
 
 &lt;p&gt;在onDestory中进行释放&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-java```&quot;&gt;
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;
 protected void onDestroy() {
 
     super.onDestroy();
@@ -210,30 +209,30 @@ protected void onDestroy() {
 }
 
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&quot;videoviewsd&quot;&gt;安卓使用videoview播放视频,做视频播放器需要SD卡读写权限.要不然可以找到视频文件,播放器显示无法播放视频.&lt;/h4&gt;
+&lt;h3 id=&quot;videoviewsd&quot;&gt;安卓使用videoview播放视频,做视频播放器需要SD卡读写权限.要不然可以找到视频文件,播放器显示无法播放视频.&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-xml```&quot;&gt;
+&lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;
 &amp;lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;/&amp;gt;
 
 &amp;lt;uses-permission android:name=&quot;android.permission.MOUNT_UNMOUNT_FILESYSTEMS&quot;/&amp;gt;
 
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&quot;app&quot;&gt;让整个APP没有标题栏&lt;/h4&gt;
+&lt;h3 id=&quot;app&quot;&gt;让整个APP没有标题栏&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-xml```&quot;&gt;
+&lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;
 android:theme = &quot;@android:style/Theme.Black.NoTitleBar.Fullscreen&quot;
 
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&quot;androidmanifestxmlactivity&quot;&gt;强制横屏在AndroidManifest.xml的activity中&lt;/h4&gt;
+&lt;h3 id=&quot;androidmanifestxmlactivity&quot;&gt;强制横屏在AndroidManifest.xml的activity中&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-xml```&quot;&gt;
+&lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;
 android:launchMode = &quot;singleTask&quot;
 
 android:screenorientation = &quot;landscape&quot;
 
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&quot;section&quot;&gt;让视频播放全屏&lt;/h4&gt;
-&lt;pre&gt;&lt;code class=&quot;language-java```&quot;&gt; case R.id.fullscreen://全屏/窗口切换
+&lt;h3 id=&quot;section&quot;&gt;让视频播放全屏&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt; case R.id.fullscreen://全屏/窗口切换
       {
        if(!fullscreenFlag){//设置RelativeLayout的全屏模式
         RelativeLayout.LayoutParams layoutParams=new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.FILL_PARENT, RelativeLayout.LayoutParams.FILL_PARENT);
@@ -256,7 +255,7 @@ fullscreenFlag = (!fullscreenFlag);break;
       }
 
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&quot;section-1&quot;&gt;进度条设计&lt;/h4&gt;
+&lt;h3 id=&quot;section-1&quot;&gt;进度条设计&lt;/h3&gt;
 
 &lt;p&gt;在seekbar使用的过程中，出现了一个诡异的现象。duration是视频总长度，seekbar总长度是100。progress是进度条（0-100）的数值。定义了一个&lt;/p&gt;
 
@@ -268,7 +267,7 @@ fullscreenFlag = (!fullscreenFlag);break;
 
 &lt;p&gt;由此可见，应该是java编译器优化导致的，知道最后使用了一个int类型，优化成为每一步都使用int类型，这样progress/100就变成了0，0 * 其他数都为0。&lt;/p&gt;
 
-&lt;h4 id=&quot;section-2&quot;&gt;至此，播放部分完成。&lt;/h4&gt;
+&lt;h3 id=&quot;section-2&quot;&gt;至此，播放部分完成。&lt;/h3&gt;
 
 &lt;p&gt;可以点击播放、停止、复位、进度条可以拖动控制播放进度（后期补全打开文件功能），软件截图如下：&lt;/p&gt;
 
