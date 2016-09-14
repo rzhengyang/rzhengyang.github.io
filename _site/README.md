@@ -1,7 +1,3 @@
-# 3-Jekyll Theme
-
-欢迎任何改进建议，请直接[提交 issues](https://github.com/P233/3-Jekyll/issues/new)，感谢。
-
 ## 主要功能
 
 * 不支持 IE9 及以下浏览器。
@@ -11,8 +7,6 @@
 * Lazy-load Disqus。
 * 自动生成文章目录列表（h1-h3），鼠标移动到浏览器右侧边缘自动滑出（给每个标题重新生成一串随机字母做 ID，但这样可能会影响分享链接）。
 * 支持移动设备，文章目录在移动设备上不显示。
-
-同时制作了一份 Ghost 版本，请查看：[https://github.com/P233/3-Ghost](https://github.com/P233/3-Ghost)，你也可以移植给其他 Blog 平台，需遵守 MIT License。
 
 **安装后需要做一些简单配置才可使用，请仔细阅读下面的说明：**
 
@@ -70,7 +64,7 @@ Disqus 评论加载比较慢，所以使用了 lazy-load 的方式，在 `/asset
 
 ### 调整配色
 
-个人非常不擅长配色，所以在 `/assets/_sass/style.scss` 文件中尽可能多地定义了颜色变量方便大家修改配色。关于默认的主题配色也请大家多提建议。
+配色，所以在 `/assets/_sass/style.scss` 文件中尽可能多地定义了颜色变量方便大家修改配色。关于默认的主题配色也请大家多提建议。
 
 ### 设置 RSS
 
@@ -79,6 +73,7 @@ Disqus 评论加载比较慢，所以使用了 lazy-load 的方式，在 `/asset
 ## 已知问题
 
 1. 键盘 <kbd>Space</kbd> <kbd>PgUp</kbd> <kbd>PgDn</kbd> <kbd>↑</kbd> <kbd>↓</kbd> 等快捷键无效，这是由于当前的布局方式影响的。iOS7 Mobile Safari 自动隐藏地址栏也会无效。
+2. 鼠标 右侧显示的隐藏菜单，与滚动条有相互影响。
 
 ## Credits
 
@@ -88,7 +83,7 @@ Disqus 评论加载比较慢，所以使用了 lazy-load 的方式，在 `/asset
 
 ## Copyright & License
 
-Copyright (c) 2013 Peiwen Lu - Released under The MIT License.
+Copyright (c) 2016 Billy - Released under The MIT License.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

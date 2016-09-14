@@ -5,6 +5,7 @@ tag: 技术
 ---
 
 ```c
+
 void quicksort(int * num,int size,int left,int right)
 {
  int i,j,t,temp;
