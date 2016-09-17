@@ -6,8 +6,8 @@
     <atom:link href="place_your_blog_url_here/rss.xml" rel="self" type="application/rss+xml" />
     <description>place_your_blog_description_here</description>
     <language>place_your_blog_language_here</language>
-    <pubDate>Wed, 14 Sep 2016 13:59:19 +0800</pubDate>
-    <lastBuildDate>Wed, 14 Sep 2016 13:59:19 +0800</lastBuildDate>
+    <pubDate>Sat, 17 Sep 2016 15:40:35 +0800</pubDate>
+    <lastBuildDate>Sat, 17 Sep 2016 15:40:35 +0800</lastBuildDate>
 
     
     <item>
@@ -102,6 +102,7 @@ for (int i = 0; i &amp;lt; 100; i++)
       <author>place_your_name_here</author>
       <guid>place_your_blog_url_here/2016/09/10/rzy_test2</guid>
       <description>&lt;h1 id=&quot;videoview&quot;&gt;视频播放，选用videoview进行播放器的设计&lt;/h1&gt;
+
 &lt;h2 id=&quot;layoutvideoview&quot;&gt;在layout中，加入videoview控件。&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;	X=1;
 	who ==2?
@@ -118,6 +119,7 @@ for (int i = 0; i &amp;lt; 100; i++)
 
 
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2 id=&quot;mainactivityvideoview&quot;&gt;在Mainactivity中使用videoview&lt;/h2&gt;
 &lt;p&gt;oncreat方法中&lt;/p&gt;
 
@@ -209,6 +211,7 @@ protected void onDestroy() {
 }
 
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;h3 id=&quot;videoviewsd&quot;&gt;安卓使用videoview播放视频,做视频播放器需要SD卡读写权限.要不然可以找到视频文件,播放器显示无法播放视频.&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;
@@ -217,12 +220,14 @@ protected void onDestroy() {
 &amp;lt;uses-permission android:name=&quot;android.permission.MOUNT_UNMOUNT_FILESYSTEMS&quot;/&amp;gt;
 
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;h3 id=&quot;app&quot;&gt;让整个APP没有标题栏&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;
 android:theme = &quot;@android:style/Theme.Black.NoTitleBar.Fullscreen&quot;
 
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;h3 id=&quot;androidmanifestxmlactivity&quot;&gt;强制横屏在AndroidManifest.xml的activity中&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;
@@ -231,6 +236,7 @@ android:launchMode = &quot;singleTask&quot;
 android:screenorientation = &quot;landscape&quot;
 
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;h3 id=&quot;section&quot;&gt;让视频播放全屏&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt; case R.id.fullscreen://全屏/窗口切换
       {
@@ -255,6 +261,7 @@ fullscreenFlag = (!fullscreenFlag);break;
       }
 
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;h3 id=&quot;section-1&quot;&gt;进度条设计&lt;/h3&gt;
 
 &lt;p&gt;在seekbar使用的过程中，出现了一个诡异的现象。duration是视频总长度，seekbar总长度是100。progress是进度条（0-100）的数值。定义了一个&lt;/p&gt;
