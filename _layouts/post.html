@@ -21,10 +21,5 @@ layout: default
   </div>
 </div>
 
-{% if site.disqus_shortname %}
-<div class="comment container">
-  <div id="disqus_thread">
-    <a href=""></a>
-  </div>
-</div>
-{% endif %}
+
+<div id="ds-thread" class="ds-thread" data-url="http://rzhengyang.me/{{page.url}}" data-title="{{ page.title }}" data-thread-key="{{ page.id }}"></div>
