@@ -21,5 +21,6 @@ layout: default
   </div>
 </div>
 
-
-<div id="ds-thread" class="ds-thread" data-url="http://rzhengyang.me/{{page.url}}" data-title="{{ page.title }}" data-thread-key="{{ page.id }}"></div>
+<div class="ds-thread" data-thread-key="{{ page.id }}"  data-title="{{ page.title }} | {{ site.title }}" data-url="{{ site.url }}{{ page.url }}"></div>
+<script>var duoshuoQuery = {short_name:"rzhengyang"};</script>
+<script src="http://static.duoshuo.com/embed.js"></script>

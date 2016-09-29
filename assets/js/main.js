@@ -16,16 +16,19 @@ $(function() {
       return this.hostname != window.location.hostname;
     }).attr('target', '_blank');
 
+  var duoshuoQuery = {short_name:"rzhengyang"};
+      src="http://static.duoshuo.com/embed.js"  
+      
     // discus comment.
-    //{% if site.disqus_shortname %}
-  var duoshuoQuery = {short_name: "rzhengyang"};
+  //{% if site.duoshuo_shortname %}
+ /* var duoshuoQuery = {short_name: "rzhengyang"};
     (function() {
         var ds = document.createElement('script');
         ds.type = 'text/javascript';ds.async = true;
         ds.src = 'http://static.duoshuo.com/embed.js';
         ds.charset = 'UTF-8';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')      [0]).appendChild(ds);
-    })();
+    })();*/
     //{% endif %}
 
     // your scripts
@@ -35,7 +38,6 @@ $(function() {
 
   // NProgress
   NProgress.configure({ showSpinner: false });
-
 
   // Pjax
   $(document).pjax('#sidebar-avatar, .toc-link', '#main', {
@@ -70,7 +72,7 @@ $(function() {
       toc.hide();
       $('.toc-link[data-tags~=' + filter + ']').fadeIn(350);
     }
-    $(this).addClass('active').siblings().removeClass('active');
+    $(this).addClass('active').siblings().removeClass('active');  
   });
 
 
