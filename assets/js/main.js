@@ -18,7 +18,7 @@ $(function() {
 
   var duoshuoQuery = {short_name:"rzhengyang"};
       src="http://static.duoshuo.com/embed.js"  
-      
+     // location.replace(location.href);
     // discus comment.
   //{% if site.duoshuo_shortname %}
  /* var duoshuoQuery = {short_name: "rzhengyang"};
@@ -55,6 +55,7 @@ $(function() {
       NProgress.done();
       main.scrollTop(0).addClass('fadeIn');
       menu.add(sidebar).removeClass('open');
+        location.replace(location.href);
       {% if site.google_analytics %}
       ga('set', 'location', window.location.href);
       ga('send', 'pageview');
@@ -73,6 +74,7 @@ $(function() {
       $('.toc-link[data-tags~=' + filter + ']').fadeIn(350);
     }
     $(this).addClass('active').siblings().removeClass('active');  
+      
   });
 
 
